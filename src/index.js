@@ -1,7 +1,7 @@
 var express = require('express'),
     bodyParser = require('body-parser'),
     logger = require('./lib/logger');
-    routes = require('routes');
+    routes = require('./routes');
 
 var PORT = process.env.PORT || 80;
 var app = express();

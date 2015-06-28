@@ -14,7 +14,8 @@ module.exports = (function() {
         // use a contact event source to generate a contact entity
         var contact_source = new ContactSource(req.param('id'));
         var contact = contact_source.generate(req.body);
-        if (contact){
+
+        if (contact) {
             res.send(200).json(contact);
         } else {
             // not sure 404 is the right response here
