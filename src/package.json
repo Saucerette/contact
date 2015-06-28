@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git@github.com:Saucerette/contact.git"
   },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --recursive test"
+  },
   "author": "Tim Rodger tim.rodger@gmail.com",
   "dependencies": {
     "express": "~4.*",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "should": "~4.3.0",
+    "mockman": "*",
     "mocha": "~2.0.1"
   }
 }
