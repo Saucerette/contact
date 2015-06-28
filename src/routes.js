@@ -1,6 +1,6 @@
 var express = require('express'),
     logger = require('./lib/logger'),
-    ContactSource = require('lib/contact_source');
+    ContactSource = require('./lib/contact_source');
 
 module.exports = (function() {
     'use strict';
