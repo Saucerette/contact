@@ -12,15 +12,16 @@ module.exports = (function() {
      */
     routes.post('/contact/:id', function(req, res){
         // use a contact event source to generate a contact entity
+        logger.info("id: " + req.param('id') + ' body: ' + req.body);
+
         var contact_source = new ContactSource(req.param('id'));
         var contact = contact_source.generate(req.body);
 
         if (contact) {
-            res.send(200).json(contact);
+            res.status(200).json(contact);
         } else {
-            // not sure 404 is the right response here
-            // the entity does not exist, but...?
-            res.send(404);
+            // the entity does not exist in the incoming data, so respond with 400 bad request
+            res.status(400);
         }
     });
 
