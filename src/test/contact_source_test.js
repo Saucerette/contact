@@ -44,15 +44,15 @@ describe('ContactSource', function() {
                },
                {
                    'name' : 'ace.contact.updated', 'timestamp' : '7', 'content-type' : 'application/vnd.ace.contact-v1+json',
-                   'data' : {'id' : id, 'firstname' : 'Tim'}
+                   'data' : {'id' : id, 'firstname' : 'Ptolemy'}
                },
                {
                    'name' : 'ace.contact.updated', 'timestamp' : '11', 'content-type' : 'application/vnd.ace.contact-v1+json',
-                   'data' : {'id' : id, 'surname' : 'Rodger'}
+                   'data' : {'id' : id, 'surname' : 'God'}
                },
                {
                    'name' : 'ace.contact.updated', 'timestamp' : '19', 'content-type' : 'application/vnd.ace.contact-v1+json',
-                   'data' : {'id' : id, 'firstname' : 'Timothy'}
+                   'data' : {'id' : id, 'firstname' : 'Potty'}
                }
            ];
 
@@ -61,8 +61,8 @@ describe('ContactSource', function() {
 
            assert.equal(id, contact.id);
            assert.equal(email, contact.email);
-           assert.equal('Timothy', contact.firstname);
-           assert.equal('Rodger', contact.surname);
+           assert.equal('Potty', contact.firstname);
+           assert.equal('God', contact.surname);
        });
 
        it('should return a contact object with array of phone numbers', function() {
